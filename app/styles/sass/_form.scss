@@ -1,0 +1,75 @@
+
+
+/* Prerequisites:  CSS Reset, Sass/Compass, PrefixFree (by Lea Verou), FontAwesome (for Dropdown Box) */
+
+
+
+/* Variables & Mixins */
+//$bg: #fff;  /* Changes Entire Color Scheme */
+// $text: lighten($bg,35%);
+
+.roundedborder {
+  @include border-radius (.2em);
+}
+
+.border {
+  border: 1px solid #6c6c6c;
+}
+
+.fontcolor {
+  color:#6c6c6c;
+}
+
+form {
+  margin: 2em auto;
+  width:100%;
+  font-size:1em;
+  font-family: "AdriaGroteskRegular";
+}
+
+input, select, textarea {outline:none;}
+label {padding:0 .5em 0 .5em;}
+
+
+/* Text Input */
+input[type='text'] {
+  @extend .roundedborder;
+  @extend .border;
+  @extend .fontcolor;
+  margin:.2em 0 1em;
+  padding: 1em;
+  width:100%;
+  font-family: "AdriaGroteskRegular";
+  font-size: 1.0em;
+}
+
+::-webkit-input-placeholder { @extend .fontcolor;}
+:-moz-placeholder { @extend .fontcolor;} /* FF 18 */
+::-moz-placeholder { @extend .fontcolor;} /* FF 19+ */
+:-ms-input-placeholder { @extend .fontcolor;}
+
+
+/* Text Area */
+textarea {
+  @extend .roundedborder;
+  @extend .border;
+  @extend .fontcolor;
+  height:10em;
+  margin:.5em 0 1em;
+  padding:1em;
+  width:100%;
+  font-family: "AdriaGroteskRegular";
+  font-size: 1.1em;
+  resize:none;
+}
+
+
+/* Submit Button
+@include sassy-button(gradient-style, border-radius, font-size, first-color, second-color, text-color, text-style, auto-states)
+*/
+
+input[type='submit'] {
+  @include sassy-button("shiny", 0.2em, 1em, #3387c6, #1547ac, #fff);
+  width:100%;
+  padding:1.2em;
+}

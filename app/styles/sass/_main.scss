@@ -1,0 +1,31 @@
+/*
+@include clearfix();
+@include sassy-button("simple", 10px, 19px, #1547ac);
+@include breakpoint($mobileSmall) {
+    background: url('../img/background-325.jpg');
+  }
+*/
+
+html {
+  // font-size: em(15px);
+  font-family: "AdriaGroteskRegular";
+}
+
+#container {
+
+}
+
+.content {
+  @include background-grid($color: rgba(125,125,125,0.5));
+  max-width:1300px;
+  margin:auto;
+  position:relative;
+}
+
+
+
+
+
+
+
+

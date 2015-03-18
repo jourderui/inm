@@ -1,0 +1,8 @@
+
+@import "compass/css3";
+
+@include font-face("AdriaGroteskBlack", font-files("adriagroteskblack.woff","adriagroteskblack.ttf","adriagroteskblack.svg"),("adriagroteskblack.eot"),("black"));
+
+@include font-face("AdriaGroteskRegular", font-files("adriagroteskregular.woff","adriagroteskregular.ttf","adriagroteskregular.svg"),("adriagroteskregular.eot"),("regular"));
+
+@include font-face("AdriaGroteskThin", font-files("adriagroteskthin.woff","adriagroteskthin.ttf","adriagroteskthin.svg"),("adriagroteskthin.eot"),("thin"));

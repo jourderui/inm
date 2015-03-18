@@ -1,0 +1,12 @@
+JetBrains
+*.iml
+## Directory-based project format:
+.idea/
+.sass-cache/
+.git/
+app/vendor/*
+src/*
+backup/*
+node_modules/*
+
+

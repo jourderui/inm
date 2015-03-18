@@ -1,0 +1,34 @@
+{
+  "name": "inmedia",
+  "version": "0.0.1",
+  "authors": [
+    "Michal Marencik <michal.marencik@gmail.com>"
+  ],
+  "description": "inmedia home page",
+  "main": "app/js/main.js",
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "inmedia",
+    "home",
+    "page"
+  ],
+  "license": "MIT",
+  "homepage": "www.inmedia.sk",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "breakpoint-sass": "~2.5.0",
+    "singularity": "~1.6.2"
+  },
+  "devDependencies": {
+    "bootstrap-sass": "~3.3.4"
+  }
+}
