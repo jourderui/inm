@@ -18,9 +18,11 @@
   "strict": false,
   "trailing": true,
   "smarttabs": true,
+    "sub" : true,
   "globals": {
     "angular": false,
     "describe" : false,
+    "$": false,
     "it" : false,
     "before" : false,
     "beforeEach" : false,

@@ -1,0 +1,31 @@
+@import "sprites";  // import this once for all sprites
+
+
+$sprites: sprite-map("pngicons/*.png", $spacing:20px); // import 1x sprites from buttons subfolder
+$sprites2x: sprite-map("pngicons@2x/*.png", $spacing:20px); // import 2x sprites from buttons subfolder
+
+/*
+  .myHoverActiveButton {
+    @include retina-sprite(balloons, $hover: true, $active: true);
+  }
+
+  .myHoverButton {
+    @include retina-sprite(balloons, $hover: true);
+  }
+
+  .myActiveButton {
+    @include retina-sprite(balloons, $active: true);
+  }
+*/
+
+.balloons {
+  @include retina-sprite(balloons);
+}
+
+
+.menu {
+  background-image: url("../../img/svgicons.png");
+  background-position: -124px 0px;
+  width: 30px;
+  height: 18px;
+}

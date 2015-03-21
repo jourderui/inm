@@ -14,7 +14,11 @@ var gulp = require('gulp'),
     concat = require('gulp-concat'),
     notify = require('gulp-notify'),
     cache = require('gulp-cache'),
-    del = require('del');
+    del = require('del'),
+    svgstore = require('gulp-svgstore'),
+    svgmin = require('gulp-svgmin'),
+    svgfallback = require('gulp-svgfallback');
+
 
 var EXPRESS_PORT = 9000;
 var EXPRESS_ROOT = './app';
@@ -50,6 +54,20 @@ gulp.task('clean:styles', function (cb) {
     ], cb);
 });
 
+gulp.task('svgstore', function () {
+    return gulp
+        .src('./app/img/svgicons/*.svg')
+        .pipe(svgmin())
+        .pipe(svgstore())
+        .pipe(gulp.dest('./app/img/'));
+});
+
+gulp.task('svgfallback', function () {
+    return gulp
+        .src('./app/img/svgicons/*.svg', {base: './app/img/svgicons/'})
+        .pipe(svgfallback())
+        .pipe(gulp.dest('./app/img/'));
+});
 
 
 gulp.task('styles', ['clean:styles'], function () {
@@ -67,8 +85,13 @@ gulp.task('styles', ['clean:styles'], function () {
         .pipe(notify({ message: 'STYLY HOTOVO!!!' }));
 });
 
-
-gulp.task('scripts', function () {
+gulp.task('clean:scripts', function (cb) {
+    del([
+        './app/js/main.js',
+        './app/js/main.min.js'
+    ], cb);
+});
+gulp.task('scripts',['clean:scripts'], function () {
     return gulp.src('app/js/main/*.js')
         .pipe(jshint('.jshintrc'))
         .pipe(jshint.reporter('default'))
@@ -76,7 +99,7 @@ gulp.task('scripts', function () {
         .pipe(gulp.dest('app/js/'))
         .pipe(rename({suffix: '.min'}))
         .pipe(uglify())
-        .pipe(gulp.dest('app/js/main'))
+        .pipe(gulp.dest('app/js'))
         .pipe(notify({ message: 'SKRIPTY HOTOVO!!!' }));
 });
 
@@ -87,34 +110,31 @@ gulp.task('images', function () {
         .pipe(notify({ message: 'IMG HOTOVO!!!' }));
 });
 
-gulp.task('copy', function () {
-    gulp.src(['./node_modules/bootstrap-sass/assets/fonts/**/*'])
-        .pipe(gulp.dest('app/fonts/'));
-    gulp.src('./node_modules/restangular/node_modules/lodash/dist/lodash.underscore.min.js')
+gulp.task('clean:vendor', function (cb) {
+    del([
+        './app/vendor/*'
+    ], cb);
+});
+gulp.task('copy',['clean:vendor'], function () {
+    gulp.src(['./bower_components/jquery/dist/*'])
         .pipe(gulp.dest('app/vendor/'))
         .pipe(notify({ message: 'COPY HOTOVO!!!' }));
 });
 
 
-
-gulp.task('clean', function (cb) {
-    del(['app/styles/css/*', 'app/js/main/*', 'app/img/opt/*'], cb);
-});
-
-gulp.task('default', ['clean', 'watch'], function () {
-    gulp.start('styles', 'scripts', 'images', 'copy');
+gulp.task('default', function () {
+    gulp.start('styles', 'scripts', 'images', 'copy', 'watch');
 });
 
 
 gulp.task('watch', function () {
     startExpress();
     startLivereload();
+    gulp.watch('app/styles/*.scss', ['styles']);
+    gulp.watch('app/styles/**/*.scss', ['styles']);
+    gulp.watch('app/js/main/*.js', ['scripts']);
     gulp.watch('app/*.html', notifyLivereload);
-    gulp.watch('app/temp/*.html', notifyLivereload);
+    gulp.watch('app/fonts/*', notifyLivereload);
     gulp.watch('app/styles/css/*.css', notifyLivereload);
     gulp.watch('app/js/*.js', notifyLivereload);
-    gulp.watch('app/styles/*.scss', ['styles']);
-    /* gulp.watch('app/js/*.js', ['scripts']); */
-    gulp.watch('app/img/*.png', ['images']);
-    gulp.watch('app/img/*.jpg', ['images']);
 });

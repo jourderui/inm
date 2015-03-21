@@ -7,6 +7,8 @@ require 'singularitygs'
 require 'breakpoint-slicer'
 require 'susy'
 require 'sassy-buttons'
+require 'sass-css-importer'
+
 
 # Set this to the root of your project when deployed:
 http_path = "/"

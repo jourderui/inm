@@ -1,0 +1,99 @@
+
+.arrowemptyr {
+  background-image: url(svgicons.png);
+  background-position: 0px 0px;
+  width: 6px;
+  height: 10px;
+}
+
+.arrowfullr {
+  background-image: url(svgicons.png);
+  background-position: -6px 0px;
+  width: 6px;
+  height: 12px;
+}
+
+.behance {
+  background-image: url(svgicons.png);
+  background-position: -12px 0px;
+  width: 19px;
+  height: 12px;
+}
+
+.cross {
+  background-image: url(svgicons.png);
+  background-position: -31px 0px;
+  width: 22px;
+  height: 22px;
+}
+
+.facebook {
+  background-image: url(svgicons.png);
+  background-position: -53px 0px;
+  width: 7px;
+  height: 16px;
+}
+
+.linkedin {
+  background-image: url(svgicons.png);
+  background-position: -60px 0px;
+  width: 17px;
+  height: 16px;
+}
+
+.logo {
+  background-image: url(svgicons.png);
+  background-position: -77px 0px;
+  width: 47px;
+  height: 28px;
+}
+
+.menu {
+  background-image: url(svgicons.png);
+  background-position: -124px 0px;
+  width: 30px;
+  height: 18px;
+}
+
+.pinterest {
+  background-image: url(svgicons.png);
+  background-position: -154px 0px;
+  width: 14px;
+  height: 18px;
+}
+
+.redline {
+  background-image: url(svgicons.png);
+  background-position: -168px 0px;
+  width: 34px;
+  height: 2px;
+}
+
+.sipkafulld {
+  background-image: url(svgicons.png);
+  background-position: -202px 0px;
+  width: 12px;
+  height: 6px;
+}
+
+.slideshare {
+  background-image: url(svgicons.png);
+  background-position: -214px 0px;
+  width: 24px;
+  height: 16px;
+}
+
+.snail {
+  background-image: url(svgicons.png);
+  background-position: -238px 0px;
+  width: 11px;
+  height: 20px;
+}
+
+.twitter {
+  background-image: url(svgicons.png);
+  background-position: -249px 0px;
+  width: 19px;
+  height: 12px;
+}
+
