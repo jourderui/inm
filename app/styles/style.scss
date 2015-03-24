@@ -4,8 +4,6 @@
 @import "compass/utilities";
 @import "compass/css3";
 @import "compass/typography";
-@import "compass/utilities";
-@import "susy";
 
 
 // import settings :
@@ -18,6 +16,7 @@
 @import 'sass/print';
 // @import "CSS:sass/img";
 @import 'sass/icons';
+@import 'hover/hover';
 
 @mixin home($folder) {
   $folder: "/app/styles/sass";

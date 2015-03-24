@@ -1,0 +1,96 @@
+
+.menu-wrap {
+    /*border:1px solid black;*/
+    display:inline-block;
+    }
+.menu-content {
+    position:absolute;
+    display:inline-block;
+    /*border:1px solid black;*/
+    margin-left:-263px;
+    width:263px;
+    background-color:#303030;
+
+}
+.menu-stripe {
+    position:absolute;
+    display:inline-block;
+    /* border:1px solid black; */
+    width:72px;
+    text-align: center;
+
+}
+
+#menu,#cross {
+    cursor:pointer;
+}
+
+.logo-stripe{
+    margin-top:18px;
+}
+
+.home-head {
+    /*border:1px solid black;*/
+    margin-left:72px;
+}
+.picture-wrap {
+
+}
+.picture, img {
+    width:100%;
+
+}
+.button {
+    display: inline-block;
+    padding: 1em;
+    background-color: #79BD9A;
+    text-decoration: none;
+    color: white;
+}
+
+.icon-logo {
+    cursor:pointer;
+}
+
+.no-svg .menu-button-closed {
+    cursor:pointer;
+    display:block;
+   /* border:1px solid black;*/
+    background-image: url("../../img/svgicons.png");
+    background-position: -124px 0px;
+    width: 30px;
+    height: 18px;
+}
+
+.menu-button-closed {
+    cursor:pointer;
+    display:block;
+    margin:0 auto;
+}
+
+.svg .menu-button-closed {
+    /*border:1px solid black;*/
+    background-image: url("../../img/svgicons/menu.svg");
+    width: 30px;
+    height: 18px;
+}
+.menu-button-open {
+    cursor:pointer;
+    display:none;
+    margin:0 auto;
+}
+.no-svg .menu-button-open {
+    /* border:1px solid black;*/
+    background-image: url("../../img/svgicons.png");
+    background-position: -31px 0px;
+    width: 22px;
+    height: 22px;
+}
+
+
+.svg .menu-button-open {
+    /*border:1px solid black;*/
+    background-image: url("../../img/svgicons/cross.svg");
+    width: 22px;
+    height: 22px;
+}

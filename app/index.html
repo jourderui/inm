@@ -25,54 +25,109 @@
 </head>
 
 <body>
-<div class="container">
-    <div class="balloons"></div>
 
-<object type="image/svg+xml" data="/img/svgicons/menu.svg">
-    <div class="menu"></div>
-</object>
+<section>
+    <div id="menu-wrap">
+        <div class="menu-content">
+            <div class="logo-omni"></div>
+            <ul class="menu-omni">
+                <li>NÁŠ PROCES</li>
+                <li>NAŠE PRÁCE</li>
+                <li>BLOG</li>
+                <li>KONTAKT</li>
+                <li>NAŠTARTUJ SVOJ PROJEKT</li>
+            </ul>
+            <div class="menu-newsletter">
+                <div class="newsletter-h">NEWSLETTER</div>
+                <div class="newsletter-p">
+                    Prajete si dostávať aktuálne informácie priamo na Váš e-mail?
+                </div>
+                <form>
+                    <input type="email" name="email" required>
+                </form>
+            </div>
+        </div>
+        <div class="menu-stripe">
+                <object type="image/svg+xml" data="/img/svgicons/logo.svg" class="logo-stripe">
+                    <div class="icon-logo"></div>
+                 </object>
 
-</div>
-<div class="pollSlider"></div>
-<div id="pollSlider-button"></div>
+                <div class="menu-button-closed" id="menu"></div>
+                <div class="menu-button-open" id="cross"></div>
+            </div>
+        </div>
+    <div class="home-head">
+        <div class="picture-wrap">
+            <picture class="picture">
+                <!--[if IE 9]><video style="display: none;"><![endif]-->
+                <source srcset="img/head-1280.jpg" media="(min-width: 1024px)">
+                <source srcset="img/head-1024.jpg, img/head-1280.jpg 2x" media="(min-width: 800px)">
+                <!--[if IE 9]></video><![endif]-->
+                <img srcset="img/head-800.jpg, img/head-1024.jpg 2x" alt="head-img">
+            </picture>
+        </div>
+    </div>
+</section>
+<a href="#" class="button hvr-float">Checkout</a>
+
+<section>
+    <div class="container">
+        <div class="balloons"></div>
+    </div>
+</section>
+
 </body>
 
 <!-- Libs -->
 <script>
-    /*
+
     //SIMPLE SVG SUPPORT DETECTION
     function supportsSVG() {
         return !! document.createElementNS && !! document.createElementNS('http://www.w3.org/2000/svg','svg').createSVGRect;
     }
     if (supportsSVG()) {
-        document.documentElement.className += ' svg';
+        document.documentElement.className += 'svg';
     } else {
-        document.documentElement.className += ' no-svg';
+        document.documentElement.className += 'no-svg';
     }
-    */
 
-    /* Create non Blocking link to CSS file */
+    // PICTUREFILL
+    var picturefill = document.createElement('script');
+    picturefill.src = 'vendor/picturefill.min.js';
+    if(!window.HTMLPictureElement){
+        document.createElement('picture');
+    }
+    document.getElementsByTagName('body')[0].appendChild(picturefill);
+
+    /* Create non Blocking link to CSS file support IE8+ */
     var styleLink = document.createElement('link');
-    styleLink.href = 'styles/css/style.min.css';
+    styleLink.href = 'styles/css/style.css';
     styleLink.media = 'all';
     styleLink.rel = 'stylesheet';
     document.getElementsByTagName('head')[0].appendChild(styleLink);
+
+    var styleManual = document.createElement('link');
+    styleManual.href = 'styles/css/manual.css';
+    styleManual.media = 'all';
+    styleManual.rel = 'stylesheet';
+    document.getElementsByTagName('head')[0].appendChild(styleManual);
 
     /* Create non Blocking link to jQuery file */
     var jQuery = document.createElement('script');
     jQuery.src = 'vendor/jquery.min.js';
     document.getElementsByTagName('body')[0].appendChild(jQuery);
 
-    /* Create non Blocking link to Modernizr file
-     var modernizr = document.createElement('script');
-     modernizr.src = 'vendor/modernizr.js';
-     document.getElementsByTagName('body')[0].appendChild(modernizr);
-     */
-    /* Create non Blocking link to jQuery file
-     var jQueryEasings = document.createElement('script');
-     jQueryEasings.src = 'vendor/jquery.easing.min.js';
-     document.getElementsByTagName('body')[0].appendChild(jQuery);
-     */
+
+     /* Non Blocking load JS IE9+
+     function loadJS(u){var r = document.getElementsByTagName("script")[0], s = document.createElement("script");s.src = u;r.parentNode.insertBefore( s, r );}
+
+     if(!window.HTMLPictureElement){
+     document.createElement('picture');
+        loadJS("http://cdn.jsdelivr.net/g/picturefill(picturefill.min.js+plugins/mutation/ri.mutation.min.js+plugins/intrinsic-dimension/ri.intrinsic.min.js+plugins/typesupport/ri.type.min.js)");
+     }
+    */
+
+
 
     /* Create non Blocking link to main.js file */
     var sourceScript = document.createElement('script');

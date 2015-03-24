@@ -20,12 +20,25 @@
 
 
 
-
+// SINGULARITY SETUP
 
 @include sgs-change('debug', true);
 @include sgs-change('mobile first', true);
 @include sgs-change('direction', 'ltr');
 @include sgs-change('output', 'isolation');
+
+@include add-grid(8);
+@include add-grid(8 at 400px);
+@include add-grid(10 at 600px);
+@include add-grid(14 at 800px);
+@include add-grid(14 at 1024px);
+@include add-grid(14 at 1280px);
+
+// @include add-gutter-style('fixed' at 700px);
+@include add-gutter(1/8);
+@include add-gutter(.25 at 1024px);
+
+
 
 * {
   @include box-sizing('border-box');
@@ -33,35 +46,26 @@
 }
 
 
-$slicer-breakpoints: 0 400px 600px 800px 1050px 1300px;
+$slicer-breakpoints: 0 400px 600px 800px 1024px 1280PX;
 $amount-of-slices:   length($slicer-breakpoints);
-$slicer-breakpoint-names:       'xs'        's'         'm'         'l'         'xl'        'xx';
+$slicer-breakpoint-names:       'xs'        's'         'm'         'l'         'xl'      'xxl' ;
 $slicer-anti-overlap-corrections: 1px, -0.1em, -0.1rem;
 $breakpoint-no-query-wrappers:  false;
 
-
-@include add-grid(8);
-@include add-grid(8 at 400px);
-@include add-grid(10 at 600px);
-@include add-grid(14 at 800px);
-@include add-grid(14 at 1050px);
 
 $mobileSmall: 0px 320px;
 $mobileBig: 320px 600px;
 $mobileAll: 0px 800px;
 $tabletSmall:600px 800px;
-$tabletBig:800px 1050px;
-$biggerScreens: 1050px;
-$bigScreens: 1300px;
-$ultraBigScreens: 2000px;
+$tabletBig:800px 1024px;
+$biggerScreens: 1024px;
 
 // Menu change break point
 $menuChange:0px 1050px;
 
 
-@include add-gutter(1/8);
-@include add-gutter(.25 at 1024px);
-// @include add-gutter-style('fixed' at 700px);
+
+
 
 
 /* convert pixels to ems - defaults to 15px base */
@@ -69,15 +73,6 @@ $menuChange:0px 1050px;
   @return ($px / $base) * 1em;
 }
 
-//link-colors($normal, $hover, $active, $visited, $focus)
-a {
-  @include link-colors(#fff, #ccc, #fff, #fff, #fff);
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: none;
-}
 
 // SPRITE GENERATOR
 $pngicons-spacing: 10px;
@@ -87,4 +82,38 @@ $pngicons-layout: 'smart';
 @include all-pngicons-sprites;
 
 
+
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes $animation-name {
+    @content;
+  }
+  @-moz-keyframes $animation-name {
+    @content;
+  }
+  @-ms-keyframes $animation-name {
+    @content;
+  }
+  @-o-keyframes $animation-name {
+    @content;
+  }
+  @keyframes $animation-name {
+    @content;
+  }
+}
+
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};
+}
+
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
 

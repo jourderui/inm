@@ -12,35 +12,44 @@ html {
   font-family: "AdriaGroteskRegular";
 }
 
-#container {
-
-}
-
-.content {
-  @include background-grid($color: rgba(125,125,125,0.5));
-  max-width:1300px;
-  margin:auto;
+section {
+  width:100%;
+  max-width:1280px;
+  border:1px solid black;
   position:relative;
-  display:none;
+  overflow:hidden;
+  margin:0 auto;
 }
 
-.pollSlider{
-  position:fixed;
-  height:100%;
-  background:red;
-  width:200px;
-  right:0px;
-  margin-right: -200px;
-}
-#pollSlider-button{
-  position:fixed;
-  width:100px;
-  height:50px;
-  right:0px;
-  background:green;
-  top:300px;
+//link-colors($normal, $hover, $active, $visited, $focus)
+a {
+  @include link-colors(#fff, #ccc, #fff, #fff, #fff);
+  text-decoration: none;
 }
 
+a:hover {
+  text-decoration: none;
+}
+
+@include keyframes(slide-down) {
+  0% { opacity: 1; }
+  90% { opacity: 0; }
+}
+
+.element {
+  width: 100px;
+  height: 100px;
+  background: black;
+  @include animation('slide-down 5s 3');
+}
+
+a {
+  color: gray;
+  @include transition(color .3s ease);
+  &:hover {
+    color: black;
+  }
+}
 
 
 

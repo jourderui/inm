@@ -117,6 +117,8 @@ gulp.task('clean:vendor', function (cb) {
 });
 gulp.task('copy',['clean:vendor'], function () {
     gulp.src(['./bower_components/jquery/dist/*'])
+        .pipe(gulp.dest('app/vendor/'));
+    gulp.src(['./bower_components/picturefill/dist/*.js'])
         .pipe(gulp.dest('app/vendor/'))
         .pipe(notify({ message: 'COPY HOTOVO!!!' }));
 });
