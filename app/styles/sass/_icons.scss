@@ -5,6 +5,11 @@ $sprites: sprite-map("pngicons/*.png", $spacing:20px); // import 1x sprites from
 $sprites2x: sprite-map("pngicons@2x/*.png", $spacing:20px); // import 2x sprites from buttons subfolder
 
 /*
+// SPRITE GENERATOR
+$pngicons-spacing: 10px;
+$pngicons-sprite-dimensions: true;
+@import "pngicons/*.png";
+@include all-pngicons-sprites;
   .myHoverActiveButton {
     @include retina-sprite(balloons, $hover: true, $active: true);
   }
@@ -18,8 +23,48 @@ $sprites2x: sprite-map("pngicons@2x/*.png", $spacing:20px); // import 2x sprites
   }
 */
 
+.inmedia {
+  @include retina-sprite(inmedia);
+}
+.jt {
+  @include retina-sprite(jt);
+}
+.oms {
+  @include retina-sprite(oms);
+}
+.protherm {
+  @include retina-sprite(protherm);
+}
+.vaillant {
+  @include retina-sprite(vaillant);
+}
+.proxenta {
+  @include retina-sprite(proxenta);
+}
+.skype {
+  @include retina-sprite(skype);
+}
+.markiza {
+  @include retina-sprite(markiza);
+}
+.segum {
+  @include retina-sprite(segum);
+}
+.cinemax {
+  @include retina-sprite(cinemax);
+}
+.paravan {
+  @include retina-sprite(paravan);
+}
+.microsoft {
+  @include retina-sprite(microsoft);
+}
+.dema {
+  @include retina-sprite(dema);
+}
+.rocket {
+  @include retina-sprite(rocket);
+}
 .balloons {
   @include retina-sprite(balloons);
 }
-
-

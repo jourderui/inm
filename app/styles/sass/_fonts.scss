@@ -1,8 +1,12 @@
 
 @import "compass/css3";
 
-@include font-face("AdriaGroteskBlack", font-files("adriagroteskblack.woff","adriagroteskblack.ttf","adriagroteskblack.svg"),("adriagroteskblack.eot"),("black"));
+@include font-face("GothamLight", font-files("Gotham-Light.woff","Gotham-Light.ttf","Gotham-Light.svg"),("Gotham-Light.eot"),("light"));
 
-@include font-face("AdriaGroteskRegular", font-files("adriagroteskregular.woff","adriagroteskregular.ttf","adriagroteskregular.svg"),("adriagroteskregular.eot"),("regular"));
+@include font-face("GothamMedium", font-files("Gotham-Medium.woff","Gotham-Medium.ttf","Gotham-Medium.svg"),("Gotham-Medium.eot"),("medium"));
 
-@include font-face("AdriaGroteskThin", font-files("adriagroteskthin.woff","adriagroteskthin.ttf","adriagroteskthin.svg"),("adriagroteskthin.eot"),("thin"));
+@include font-face("GothamBook", font-files("Gotham-Book.woff","Gotham-Book.ttf","Gotham-Book.svg"),("Gotham-Book.eot"),("book"));
+
+@include font-face("GothamBookItalic", font-files("Gotham-BookItalic.woff","Gotham-BookItalic.ttf","Gotham-BookItalic.svg"),("Gotham-BookItalic.eot"),("bookItalic"));
+
+@include font-face("GothamBold", font-files("Gotham-Bold.woff","Gotham-Bold.ttf","Gotham-Bold.svg"),("Gotham-Bold.eot"),("bold"));

@@ -12,70 +12,248 @@
     <meta name="author" content="Michal Marencik">
     <meta name="description" content="INMEDIA HOME PAGE">
     <meta name="keywords"  content="INMEDIA, WEB, DESIGN">
-
-
     <!--[if lt IE 8]>
     <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script src="vendor/jquery.min.js"></script>
 </head>
 
 <body>
 
 <section>
-    <div id="menu-wrap">
+    <div class="menu-wrap">
+<!-- MENU MENU -->
         <div class="menu-content">
-            <div class="logo-omni"></div>
-            <ul class="menu-omni">
-                <li>NÁŠ PROCES</li>
-                <li>NAŠE PRÁCE</li>
-                <li>BLOG</li>
-                <li>KONTAKT</li>
-                <li>NAŠTARTUJ SVOJ PROJEKT</li>
+            <div class="logo-menu">
+                <div class="logo-menu-omni"></div>
+                <div class="inmedia menu-omni"></div>
+            </div>
+            <ul class="menu-menu">
+                <li class="menu-item"><span>NÁŠ PROCES</span></li>
+                <li class="menu-item" id="works"><span >NAŠE PRÁCE</span></li>
+                <li class="menu-item" id="blog"><span>BLOG</span></li>
+                <li class="menu-item"><span>KONTAKT</span></li>
+                <li class="menu-item" id="project"><span>NAŠTARTUJ SVOJ PROJEKT</span></li>
             </ul>
             <div class="menu-newsletter">
                 <div class="newsletter-h">NEWSLETTER</div>
                 <div class="newsletter-p">
                     Prajete si dostávať aktuálne informácie priamo na Váš e-mail?
                 </div>
-                <form>
-                    <input type="email" name="email" required>
+                <form class="menu-form">
+                    <input class="menu-form-mail" type="email" name="email" placeholder="Vložte e-mail" required>
+                    <input type="submit" id="menu-email-submit" name="submit" value="">
                 </form>
             </div>
         </div>
-        <div class="menu-stripe">
-                <object type="image/svg+xml" data="/img/svgicons/logo.svg" class="logo-stripe">
-                    <div class="icon-logo"></div>
-                 </object>
+<!-- // MENU MENU -->
 
-                <div class="menu-button-closed" id="menu"></div>
-                <div class="menu-button-open" id="cross"></div>
+<!-- MENU WORKS -->
+        <div class="menu-works">
+            <div class="menu-referencie">
+                <img  src="img/referencie-1.jpg"alt="referencie-1">
+                <div class="menu-referencie-txt">
+                    <div class="referencie-txt-h">
+                        NÁZOV REFERENCIE
+                    </div>
+                    <div class="referencie-txt-p">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting
+                    </div>
+                </div>
+            </div>
+            <div class="menu-referencie">
+                <img  src="img/referencie-2.jpg"alt="referencie-2">
+                <div class="menu-referencie-txt">
+                    <div class="referencie-txt-h">
+                        NÁZOV REFERENCIE
+                    </div>
+                    <div class="referencie-txt-p">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting
+                    </div>
+                </div>
             </div>
         </div>
-    <div class="home-head">
-        <div class="picture-wrap">
-            <picture class="picture">
-                <!--[if IE 9]><video style="display: none;"><![endif]-->
-                <source srcset="img/head-1280.jpg" media="(min-width: 1024px)">
-                <source srcset="img/head-1024.jpg, img/head-1280.jpg 2x" media="(min-width: 800px)">
-                <!--[if IE 9]></video><![endif]-->
-                <img srcset="img/head-800.jpg, img/head-1024.jpg 2x" alt="head-img">
-            </picture>
+<!--  // MENU WORKS -->
+
+        <div class="menu-project">
+            <div class="menu-project-h1">Naštartujte svoj projekt</div>
+            <div class="menu-project-h2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent arcu est, tincidunt in feugiat vitae, mattis vitae purus.</div>
+            <form>
+                    <input class="project-input" id="name" placeholder="Vaše meno" required>
+                    <input type="email" class="project-input" id="e-mail" placeholder="Váš e-mail" required>
+                    <input type="tel" class="project-input" id="telephone"  placeholder="Váše tel číslo">
+                    <input class="project-input" id="company"  placeholder="Meno spoločnosti">
+                    <input type="url" class="project-input" id="webpage" placeholder="Url webstránky">
+                    <input class="project-input" id="situate" placeholder="Vaše umiestnenie"><br>
+                    <input type="submit" id="brief" value="Stiahnuť web brief">
+                    <div class="brief-wrap"><input id="upload-brief" placeholder="Nahrať web brief"><span class="brief-icon"></span></div><br>
+                    <input type="submit" id="send" class="redbutton" value="ODOSLAT SPRÁVU">
+            </form>
+        </div>
+
+<!--  MENU STRIPE -->
+        <div class="menu-stripe">
+            <div class="logo-stripe"></div>
+            <div class="menu-button-closed" id="menu"></div>
+            <div class="menu-button-open" id="cross"></div>
+        </div>
+        <div class="head-video">
+            <video autoplay="" class="" loop="" poster="img/head-1280.jpg">
+			<!--
+                <source src="img/ws-2.m4v">
+                <source src="img/ws.webm" type="video/webm">
+                
+                <source src="../media/ttt.ogv" type="video/ogg">
+                 <object width="1080" height="720" type="application/x-shockwave-flash" data="js/flashmediaelement.swf">
+                     <param name="movie" value="js/flashmediaelement.swf" />
+                     <param name="flashvars" value="controls=true&amp;autoplay=true&amp;file=videos/my-file.mp4" />
+                 </object>
+                 -->
+            </video>
+            <div class="head-h2">VITAJTE</div>
+            <div class="head-h1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div>
+            <div class="head-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eget nisl elit. Lorem ipsum dolor sit amet, consectetur</div>
+            <div class="head-buttons">
+                <a href="#"><div class="head-button">NÁŠ PROCES</div></a>
+                <a href="#"><div class="head-button">NAŠE PRÁCE</div></a>
+            </div>
+            <div class="head-down" id="down-button"><span class="icon-down"></span></div>
+        </div>
+    </div>
+<!--  // MENU STRIPE -->
+</section>
+<section>
+    <div class="main-stripe-blog"></div>
+    <div class="blog-element-wrap">
+        <div class="blog-element left">
+            <img class="blog-image" src="img/blog-1.jpg" alt="blog1">
+            <div class="blog-text">
+                <div class="blog-h1">
+                    BLOG
+                </div>
+                <div class="blog-p">
+                    Lorem ipsum dolor sit amet, consect adipiscin elit.
+                </div>
+                <a href="#" class="blog-a">Citaj viac<span class="icon-arrow"></span></a>
+            </div>
+        </div>
+        <div class="blog-element right">
+            <img class="blog-image" src="img/blog-2.jpg" alt="blog2">
+            <div class="blog-text">
+                <div class="blog-h1">
+                    BLOG
+                </div>
+                <div class="blog-p">
+                    Lorem ipsum dolor sit amet, consect adipiscin elit.
+                </div>
+                <a href="#" class="blog-a">Citaj viac<span class="icon-arrow"></span></a>
+            </div>
         </div>
     </div>
 </section>
-<a href="#" class="button hvr-float">Checkout</a>
-
 <section>
-    <div class="container">
-        <div class="balloons"></div>
+    <div class="main-stripe-works"></div>
+    <div class="works-wrap">
+        <div class="works-text">
+            <div class="works-top">OUR WORKS</div>
+            <div class="works-line line"></div>
+            <div class="works-h1">Lorem ipsum dolor sit amet, consectadipiscing elit.</div>
+            <div class="works-h3">Marketingové kampane, UX/DESIGN, WEBDESIGN</div>
+            <div class="works-h2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent arcu est, tincidunt in feugiat vitae, mattis vitae purus. Suspendisse blandit euismod</div>
+            <a href="#"><div class="redbutton short">NÁŠ PROCES</div></a>
+        </div>
+        <div class="works-image">
+            <img src="img/laptop.jpg" alt="Laptop">
+        </div>
     </div>
 </section>
-
+<section>
+    <div class="main-stripe-clients"></div>
+    <div class="clients-wrap">
+        <div class="clients">NAŠI KLIENTI</div>
+        <div class="clients-line line"></div>
+        <div class="clients-loga">
+            <div class="loga jt"></div>
+            <div class="loga oms"></div>
+            <div class="loga protherm"></div>
+            <div class="loga vaillant"></div>
+            <div class="loga proxenta"></div>
+            <div class="loga skype"></div>
+            <div class="loga markiza"></div>
+            <div class="loga segum"></div>
+            <div class="loga cinemax"></div>
+            <div class="loga paravan"></div>
+            <div class="loga microsoft"></div>
+            <div class="loga dema correct"></div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="main-stripe-contactus"></div>
+    <div class="contatus-wrap">
+        <div class="contactus-l">
+            <div class="rocket logo"></div>
+            <div class="contactus-h1">Naštartuj svoj projekt s nami!</div>
+            <a href="#"><div class="head-button cntbut">ZACNI TERAZ</div></a>
+        </div>
+        <div class="contactus-r">
+            <div class="balloons logo"></div>
+            <div class="contactus-h1">Máš otázky? Spoj sa s nami!</div>
+            <a href="#"><div class="head-button cntbut">KONTAKTUJ NÁS</div></a>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="main-stripe-footer"></div>
+    <div class="footer">
+        <div class="footer-w first">
+            <div class="footer-h">NAŠE STARTUPY</div>
+            <div class="footer-g1">
+                <a href="#" class="footer-a">Pigeon</a>
+                <a href="#" class="footer-a">Magazine</a>
+                <a href="#" class="footer-a">Farmlandia</a>
+            </div>
+            <div class="footer-g1">
+                <a href="#" class="footer-a">Seničan.sk</a>
+                <a href="#" class="footer-a">Otvorené srdce</a>
+                <a href="#" class="footer-a">Sono Circle</a>
+            </div>
+        </div>
+        <div class="footer-w">
+            <div class="footer-h">SOCIÁLNE SIETE</div>
+            <div class="footer-g">
+                <a href="#" class="footer-a"><span class="fb"></span>Facebook</a>
+                <a href="#" class="footer-a"><span class="tw"></span>Twitter</a>
+                <a href="#" class="footer-a"><span class="behance"></span>Behance</a>
+            </div>
+            <div class="footer-g">
+                <a href="#" class="footer-a"><span class="linkedin"></span>Linkedin</a>
+                <a href="#" class="footer-a"><span class="pinterest"></span>Pinterest</a>
+                <a href="#" class="footer-a"><span class="slideshare"></span>Slideshare</a>
+            </div>
+        </div>
+        <div class="footer-w">
+            <div class="footer-h">FAKTURAČNÉ ÚDAJE</div>
+            <div class="footer-g3">
+                <span>In Media s.r.o.</span><br>
+                <span>Kvetná 1140/3</span><br>
+                <span>905 01 Senica</span><br>
+            </div>
+            <div class="footer-g3">
+                <span>IČO: 45 714 746</span><br>
+                <span>DIČ: 2023100530</span><br>
+                <span>IČ DPH: SK2023100530</span><br>
+            </div>
+        </div>
+    </div>
+    <div class="footer-horizontal">
+        &copy; 2013 In Media s.r.o.
+    </div>
+</section>
 </body>
 
 <!-- Libs -->
@@ -90,14 +268,17 @@
     } else {
         document.documentElement.className += 'no-svg';
     }
+    var lastWidth = $(window).width();
 
     // PICTUREFILL
+    /*
     var picturefill = document.createElement('script');
     picturefill.src = 'vendor/picturefill.min.js';
     if(!window.HTMLPictureElement){
         document.createElement('picture');
     }
     document.getElementsByTagName('body')[0].appendChild(picturefill);
+    */
 
     /* Create non Blocking link to CSS file support IE8+ */
     var styleLink = document.createElement('link');
@@ -111,28 +292,29 @@
     styleManual.media = 'all';
     styleManual.rel = 'stylesheet';
     document.getElementsByTagName('head')[0].appendChild(styleManual);
-
+	
     /* Create non Blocking link to jQuery file */
+	/*
     var jQuery = document.createElement('script');
     jQuery.src = 'vendor/jquery.min.js';
-    document.getElementsByTagName('body')[0].appendChild(jQuery);
+    document.getElementsByTagName('head')[0].appendChild(jQuery);
+*/
 
 
-     /* Non Blocking load JS IE9+
+
+      /*Non Blocking load JS IE9+*/
      function loadJS(u){var r = document.getElementsByTagName("script")[0], s = document.createElement("script");s.src = u;r.parentNode.insertBefore( s, r );}
-
-     if(!window.HTMLPictureElement){
-     document.createElement('picture');
-        loadJS("http://cdn.jsdelivr.net/g/picturefill(picturefill.min.js+plugins/mutation/ri.mutation.min.js+plugins/intrinsic-dimension/ri.intrinsic.min.js+plugins/typesupport/ri.type.min.js)");
-     }
-    */
+        loadJS("js/main.min.js");
 
 
 
-    /* Create non Blocking link to main.js file */
+
+
+    /* Create non Blocking link to main.js file 
     var sourceScript = document.createElement('script');
     sourceScript.src = 'js/main.min.js';
-    document.getElementsByTagName('body')[0].appendChild(sourceScript);
+    document.getElementsByTagName('head')[0].appendChild(sourceScript);
+	*/
 </script>
 
 </html>

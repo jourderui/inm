@@ -9,13 +9,13 @@
 
 html {
   // font-size: em(15px);
-  font-family: "AdriaGroteskRegular";
+  font-family: "GothamMedium";
 }
 
 section {
   width:100%;
   max-width:1280px;
-  border:1px solid black;
+  //border:1px solid black;
   position:relative;
   overflow:hidden;
   margin:0 auto;
@@ -24,11 +24,11 @@ section {
 //link-colors($normal, $hover, $active, $visited, $focus)
 a {
   @include link-colors(#fff, #ccc, #fff, #fff, #fff);
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 a:hover {
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 @include keyframes(slide-down) {
@@ -44,12 +44,9 @@ a:hover {
 }
 
 a {
-  color: gray;
+  color: #ffffff;
   @include transition(color .3s ease);
   &:hover {
-    color: black;
+    color: #fefefe;
   }
 }
-
-
-

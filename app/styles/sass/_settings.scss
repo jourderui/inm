@@ -18,21 +18,20 @@
 @import "susy";
 
 
-
+$breakpoint-default-feature:max-width;
 
 // SINGULARITY SETUP
 
 @include sgs-change('debug', true);
-@include sgs-change('mobile first', true);
+@include sgs-change('mobile first', false);
 @include sgs-change('direction', 'ltr');
 @include sgs-change('output', 'isolation');
 
-@include add-grid(8);
-@include add-grid(8 at 400px);
-@include add-grid(10 at 600px);
-@include add-grid(14 at 800px);
-@include add-grid(14 at 1024px);
-@include add-grid(14 at 1280px);
+@include add-grid(1 3 5 7 9);
+@include add-grid(2 8 2 at 1100px);
+@include add-grid(12 at 900px);
+@include add-grid(6 at 700px);
+@include add-grid(3 at 500px);
 
 // @include add-gutter-style('fixed' at 700px);
 @include add-gutter(1/8);
@@ -51,7 +50,7 @@ $amount-of-slices:   length($slicer-breakpoints);
 $slicer-breakpoint-names:       'xs'        's'         'm'         'l'         'xl'      'xxl' ;
 $slicer-anti-overlap-corrections: 1px, -0.1em, -0.1rem;
 $breakpoint-no-query-wrappers:  false;
-
+$breakpoint-to-ems: true;
 
 $mobileSmall: 0px 320px;
 $mobileBig: 320px 600px;
@@ -63,24 +62,10 @@ $biggerScreens: 1024px;
 // Menu change break point
 $menuChange:0px 1050px;
 
-
-
-
-
-
 /* convert pixels to ems - defaults to 15px base */
 @function em($px, $base: 15px) {
   @return ($px / $base) * 1em;
 }
-
-
-// SPRITE GENERATOR
-$pngicons-spacing: 10px;
-$pngicons-sprite-dimensions: true;
-$pngicons-layout: 'smart';
-@import "../img/pngicons/*.png";
-@include all-pngicons-sprites;
-
 
 
 @mixin keyframes($animation-name) {
