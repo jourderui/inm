@@ -26,6 +26,9 @@ $pngicons-sprite-dimensions: true;
 .inmedia {
   @include retina-sprite(inmedia);
 }
+.inmedia2 {
+  @include retina-sprite(inmedia2);
+}
 .jt {
   @include retina-sprite(jt);
 }

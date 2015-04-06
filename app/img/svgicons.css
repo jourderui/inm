@@ -1,105 +1,112 @@
 
-.arrowemptyr {
+.arrowback {
   background-image: url(svgicons.png);
   background-position: 0px 0px;
+  width: 17px;
+  height: 28px;
+}
+
+.arrowemptyr {
+  background-image: url(svgicons.png);
+  background-position: -17px 0px;
   width: 6px;
   height: 10px;
 }
 
 .arrowfulld {
   background-image: url(svgicons.png);
-  background-position: -6px 0px;
+  background-position: -23px 0px;
   width: 12px;
   height: 6px;
 }
 
 .arrowfullr {
   background-image: url(svgicons.png);
-  background-position: -18px 0px;
+  background-position: -35px 0px;
   width: 6px;
   height: 12px;
 }
 
 .behance {
   background-image: url(svgicons.png);
-  background-position: -24px 0px;
+  background-position: -41px 0px;
   width: 19px;
   height: 12px;
 }
 
 .cross {
   background-image: url(svgicons.png);
-  background-position: -43px 0px;
+  background-position: -60px 0px;
   width: 22px;
   height: 22px;
 }
 
 .fb {
   background-image: url(svgicons.png);
-  background-position: -65px 0px;
+  background-position: -82px 0px;
   width: 7px;
   height: 16px;
 }
 
 .lg {
   background-image: url(svgicons.png);
-  background-position: -72px 0px;
+  background-position: -89px 0px;
   width: 47px;
   height: 28px;
 }
 
 .linkedin {
   background-image: url(svgicons.png);
-  background-position: -119px 0px;
+  background-position: -136px 0px;
   width: 17px;
   height: 16px;
 }
 
 .menu {
   background-image: url(svgicons.png);
-  background-position: -136px 0px;
+  background-position: -153px 0px;
   width: 30px;
   height: 18px;
 }
 
 .pinterest {
   background-image: url(svgicons.png);
-  background-position: -166px 0px;
+  background-position: -183px 0px;
   width: 14px;
   height: 18px;
 }
 
 .redline {
   background-image: url(svgicons.png);
-  background-position: -180px 0px;
+  background-position: -197px 0px;
   width: 34px;
   height: 2px;
 }
 
 .sipkafulld {
   background-image: url(svgicons.png);
-  background-position: -214px 0px;
+  background-position: -231px 0px;
   width: 12px;
   height: 6px;
 }
 
 .slideshare {
   background-image: url(svgicons.png);
-  background-position: -226px 0px;
+  background-position: -243px 0px;
   width: 24px;
   height: 16px;
 }
 
 .snail {
   background-image: url(svgicons.png);
-  background-position: -250px 0px;
+  background-position: -267px 0px;
   width: 11px;
   height: 20px;
 }
 
 .tw {
   background-image: url(svgicons.png);
-  background-position: -261px 0px;
+  background-position: -278px 0px;
   width: 19px;
   height: 12px;
 }

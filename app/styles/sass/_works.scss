@@ -1,0 +1,123 @@
+
+
+.main-stripe-works {
+  float:left;
+  display:inline-block;
+  width:72px;
+  text-align: center;
+  background: #ffffff;
+  min-height:604px;
+  height:100%;
+  @include breakpoint($tabletAll) {
+    height:1149px;
+  }
+  @include breakpoint($mobileAll) {
+    display:none;
+  }
+}
+
+.works-wrap {
+  text-align:center;
+  /* border:1px solid black; */
+  background: #f7f7f7;
+  @include breakpoint($mobileAll) {
+    width:100%;
+  }
+  @include breakpoint($screen2) {
+    display:inline-block;
+    width:1208px;
+    float:left;
+  }
+
+}
+.works-text {
+  display:inline-block;
+  background: #f7f7f7;
+  text-align: center;
+  width:80%;
+  @include breakpoint($screen2) {
+    width:50%;
+    float:left;
+  }
+  @include breakpoint($mobileAll) {
+    padding:0 30px 0 30px;
+    width:100%;
+  }
+}
+.works-image {
+  display:inline-block;
+  @include breakpoint($screen2) {
+    width:50%;
+  }
+  @include breakpoint($mobileAll) {
+    width:100%;
+  }
+  float:right;
+}
+.works-image img {
+  float:right;
+}
+.works-top {
+  padding-top:80px;
+  font-family: GothamBold;
+  color:#808082;
+  font-size:14px;
+}
+.works-h1 {
+  font-family: GothamLight;
+  color:#2a2a2a;
+  font-size:35px;
+  @include breakpoint($mobileAll) {
+    padding:0 30px 0 30px;
+    width:100%;
+  }
+}
+.works-h3 {
+  margin-top:20px;
+  font-family: GothamMedium;
+  color:#808082;
+  font-size:12px;
+  @include breakpoint($mobileAll) {
+    padding:0 30px 0 30px;
+    width:100%;
+  }
+}
+.works-h2 {
+  font-family: GothamBook;
+  color:#2a2a2a;
+  font-size:16px;
+  width:500px;
+  @include breakpoint($mobileAll) {
+    padding:0 30px 0 30px;
+    width:100%;
+  }
+  margin:26px auto;
+  line-height:28px;
+}
+.works-line {
+  display:inline-block;
+  margin:25px 0 30px 0;
+}
+
+.no-svg .line  {
+  /* border:1px solid black;*/
+  background-image: url("../../img/svgicons.png");
+  background-position: -168px 0px;
+  width: 34px;
+  height: 2px;
+}
+
+.svg .line {
+  /*border:1px solid black;*/
+  background-image: url("../../img/svgicons/redline.svg");
+  width: 34px;
+  height: 2px;
+}
+.works-text a {
+  text-decoration: none;
+}
+
+.short{
+  margin:60px auto;
+  width:200px;
+}

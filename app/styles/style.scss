@@ -10,13 +10,21 @@
 @import 'sass/settings';
 @import 'sass/main';
 @import "sass/sassybuttons";
-//@import 'sass/form';
+
 @import 'sass/fonts';
 @import 'sass/ie';
 @import 'sass/print';
 // @import "CSS:sass/img";
 @import 'sass/icons';
 //@import 'hover/hover';
+
+@import 'sass/menu';
+@import 'sass/blog';
+@import 'sass/works';
+@import 'sass/clients';
+@import 'sass/contactus';
+@import 'sass/footer';
+@import 'sass/mobile';
 
 @mixin home($folder) {
   $folder: "/app/styles/sass";

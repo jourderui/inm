@@ -1,0 +1,77 @@
+
+
+.main-stripe-contactus {
+  float:left;
+  display:inline-block;
+  width:72px;
+  text-align: center;
+  background: #ffffff;
+  min-height:299px;
+}
+.contactus-wrap {
+
+  @include breakpoint($screen2) {
+    width:1278px;
+    float:left;
+    display:inline-block;
+  }
+  @include breakpoint($tabletAll) {
+    width:100%;
+   float:left;
+  }
+  background: #ffffff;
+}
+.contactus-l {
+  float:left;
+  position:relative;
+  margin-left:72px;
+  background:  url('../../img/contactus-l.jpg');
+  @include breakpoint($tabletAll) {
+    width:100%;
+    margin-left:72px;
+    background: #ffffff url('../../img/contactus-all.jpg') no-repeat;
+  }
+  @include breakpoint($mobileAll) {
+    margin-left:0;
+    width:100%;
+    background: #ffffff url('../../img/contactus-all.jpg') no-repeat;
+  }
+  width:601px;
+  height:299px;
+  display:inline-block;
+  text-align:center;
+}
+.contactus-r {
+  float:left;
+  @include breakpoint($tabletAll) {
+    width:100%;
+    margin-left:72px;
+    background:#ffffff url('../../img/contactus-all.jpg') no-repeat;
+  }
+  @include breakpoint($mobileAll) {
+    margin-left:0;
+    width:100%;
+    background: #ffffff url('../../img/contactus-all.jpg') no-repeat;
+  }
+  background: url('../../img/contactus-r.jpg');
+  width:601px;
+  height:299px;
+  display:inline-block;
+  text-align:center;
+}
+.logo {
+  margin:40px auto 27px auto;
+}
+.contactus-h1 {
+  text-align:center;
+  font-family: GothamLight;
+  color:#ffffff;
+  font-size:28px;
+}
+.cntbut {
+  margin:30px auto;
+  display:inline-block;
+}
+.balloons {
+  margin:50px auto 33px auto;
+}

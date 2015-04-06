@@ -1,0 +1,62 @@
+
+.clients-wrap {
+  @include breakpoint($screen2) {
+        display:inline-block;
+    width:1278px;
+    height:370px;
+  }
+  @include breakpoint($mobileAll) {
+    margin:21px auto 0 auto;
+    text-align:center;
+    width:100%;
+  }
+  float:left;
+  @include clearfix();
+  display:block;
+  background: #ffffff;
+
+}
+
+.clients {
+  @include breakpoint($mobileAll) {
+    margin:65px auto 0 auto;
+    text-align:center;
+  }
+  margin:65px 0 0 134px;
+  font-family: GothamBold;
+  color:#4d4d4e;
+  font-size:14px;
+}
+.clients-line {
+
+  @include breakpoint($mobileAll) {
+    margin:21px auto 0 auto;
+    text-align:center;
+  }
+  @include breakpoint($tabletAll) {
+    display:inline-block;
+    margin:21px auto 0 134px;
+  }
+    margin:21px auto 0 134px;
+}
+.clients-loga {
+  margin:50px 0 30px 104px;
+  @include breakpoint($mobileAll) {
+    margin:50px 0 0 0;
+  }
+}
+.loga {
+  @include breakpoint($mobileAll) {
+    display:block;
+    margin: 20px auto;
+  }
+  display:inline-block;
+  margin: 0 32px 40px 32px;
+  text-align:center;
+}
+.correct {
+  margin: 0 32px 40px 14px;
+  @include breakpoint($mobileAll) {
+    margin: 20px auto 40px auto;
+  }
+}

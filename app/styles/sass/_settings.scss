@@ -18,7 +18,7 @@
 @import "susy";
 
 
-$breakpoint-default-feature:max-width;
+$breakpoint-default-feature:min-width;
 
 // SINGULARITY SETUP
 
@@ -45,60 +45,28 @@ $breakpoint-default-feature:max-width;
 }
 
 
-$slicer-breakpoints: 0 400px 600px 800px 1024px 1280PX;
+$slicer-breakpoints: 0px 480px 800px 1024px 1280px;
 $amount-of-slices:   length($slicer-breakpoints);
-$slicer-breakpoint-names:       'xs'        's'         'm'         'l'         'xl'      'xxl' ;
+$slicer-breakpoint-names:       'xs'        's'         'm'         'l'         'xl'   ;
 $slicer-anti-overlap-corrections: 1px, -0.1em, -0.1rem;
 $breakpoint-no-query-wrappers:  false;
 $breakpoint-to-ems: true;
 
-$mobileSmall: 0px 320px;
-$mobileBig: 320px 600px;
-$mobileAll: 0px 800px;
-$tabletSmall:600px 800px;
-$tabletBig:800px 1024px;
-$biggerScreens: 1024px;
-
-// Menu change break point
-$menuChange:0px 1050px;
+$mobile2: 0px 480px;
+$mobile4: 480px 800px;
+$mobile6: 0px 600px;
+$mobile6up: 600px;
+$mobileAll:0px 800px;
+$tablet: 800px 1024px;
+$tabletAll:800px 1280px;
+$screen1: 1024px 1280px;
+$screen2:1280px;
+$screenAll:1024px;
+$noMobile:800px;
 
 /* convert pixels to ems - defaults to 15px base */
 @function em($px, $base: 15px) {
   @return ($px / $base) * 1em;
 }
 
-
-@mixin keyframes($animation-name) {
-  @-webkit-keyframes $animation-name {
-    @content;
-  }
-  @-moz-keyframes $animation-name {
-    @content;
-  }
-  @-ms-keyframes $animation-name {
-    @content;
-  }
-  @-o-keyframes $animation-name {
-    @content;
-  }
-  @keyframes $animation-name {
-    @content;
-  }
-}
-
-@mixin animation($str) {
-  -webkit-animation: #{$str};
-  -moz-animation: #{$str};
-  -ms-animation: #{$str};
-  -o-animation: #{$str};
-  animation: #{$str};
-}
-
-@mixin transition($args...) {
-  -webkit-transition: $args;
-  -moz-transition: $args;
-  -ms-transition: $args;
-  -o-transition: $args;
-  transition: $args;
-}
 

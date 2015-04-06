@@ -1,0 +1,245 @@
+.footer {
+  background: #ffffff;
+}
+.footer-wrap {
+  margin-left:72px;
+  @include breakpoint($mobileAll) {
+    margin-left:0;
+    width:100%;
+    height:auto;
+    padding-bottom:30px;
+  }
+  float:left;
+  display:inline-block;
+  text-align:center;
+  @include breakpoint($tabletAll) {
+    width:100%;
+    height:auto;
+    padding-bottom:30px;
+  }
+  width:1205px;
+  height:247px;
+  background: #f7f7f7;
+}
+.footer-w{
+  @include breakpoint($tabletAll) {
+    width:310px;
+  }
+  @include breakpoint($mobileAll) {
+
+    display:block;
+    margin:0 auto;
+  }
+  width:372px;
+  display:inline-block;
+  text-align:left;
+
+}
+.first {
+  @include breakpoint($tabletAll) {
+    margin:0;
+  }
+  @include breakpoint($mobileAll) {
+    margin:0 auto;
+    width:250px;
+  }
+  margin:0 0 0 68px;
+}
+.second {
+  @include breakpoint($mobileAll) {
+    margin:0 auto;
+    width:250px;
+  }
+}
+.third {
+  @include breakpoint($mobileAll) {
+    margin:0 auto;
+    width:310px;
+  }
+}
+.footer-g {
+  display:inline-block;
+  margin-top:20px;
+  font-family: GothamBook;
+  font-size:14px;
+  padding:10px 20px 10px 0;
+}
+.footer-g a {
+  display:block;
+  color:#3d3d3d;
+  font-family: GothamBook;
+  font-size:14px;
+}
+.footer-g1 {
+  display:inline-block;
+  margin-top:20px;
+  font-family: GothamBook;
+  font-size:14px;
+  padding:5px 20px 10px 0;
+}
+.footer-g3 {
+  display:inline-block;
+  margin-top:20px;
+  font-family: GothamBook;
+  font-size:14px;
+  padding:5px 20px 10px 0;
+}
+.footer-g3 span {
+  display:inline-block;
+  padding: 8px 0 0 0;
+  font-size:14px;
+}
+
+.footer-g1 a {
+  display:block;
+  font-family: GothamBook;
+  font-size:14px;
+  color:#3d3d3d;
+  padding: 8px 0 0 0;
+}
+
+.footer-g span {
+  vertical-align:middle;
+  padding: 20px 0 0 0;
+}
+
+.footer-h {
+  text-align:left;
+  font-family: GothamBold;
+  color:#4d4d4e;
+  font-size:11px;
+  margin:68px 0 0 0;
+  @include breakpoint($mobileAll) {
+    width:100%;
+  }
+}
+.footer-h3 {
+  text-align:left;
+  font-family: GothamBold;
+  color:#4d4d4e;
+  font-size:11px;
+  @include breakpoint($tabletAll) {
+    margin:38px 0 0 0;
+  }
+  margin:68px 0 0 0;
+}
+
+.fb{
+  display:inline-block;
+  margin:0 17px 0 5px;
+}
+
+.no-svg .fb  {
+  background-image: url("../../img/svgicons.png")no-repeat;
+  background-position: -53px 0px;
+  width: 7px;
+  height: 16px;
+}
+
+.svg .fb{
+  background: url("../../img/svgicons/fb.svg") no-repeat;
+  width: 7px;
+  height: 16px;
+}
+
+.tw {
+  display:inline-block;
+  margin:3px 10px 0 0;
+}
+
+.no-svg .tw  {
+  background-image: url("../../img/svgicons.png") no-repeat;
+  background-position: -249px 0px;
+  width: 19px;
+  height: 12px;
+}
+
+.svg .tw{
+  background: url("../../img/svgicons/tw.svg") no-repeat;
+  width: 19px;
+  height: 12px;
+}
+
+.behance {
+  display:inline-block;
+  margin:5px 10px 0 0;
+}
+
+.no-svg .behance  {
+  background-image: url("../../img/svgicons.png") no-repeat;
+  background-position: -12px 0px;
+  width: 19px;
+  height: 12px;
+}
+
+.svg .behance {
+  background: url("../../img/svgicons/behance.svg") no-repeat;
+  width: 19px;
+  height: 12px;
+}
+
+.linkedin {
+  display:inline-block;
+  margin:2px 17px 0  1px;
+}
+
+.no-svg .linkedin {
+  background-image: url("../../img/svgicons.png") no-repeat;
+  background-position: -60px 0px;
+  width: 17px;
+  height: 16px;
+}
+
+.svg .linkedin {
+  background: url("../../img/svgicons/linkedin.svg") no-repeat;
+  width: 17px;
+  height: 16px;
+}
+.pinterest {
+  display:inline-block;
+  margin:5px 18px 0 3px;
+}
+
+.no-svg .pinterest {
+  background-image: url("../../img/svgicons.png") no-repeat;
+  background-position: -154px 0px;
+  width: 14px;
+  height: 18px;
+}
+
+.svg .pinterest {
+  background: url("../../img/svgicons/pinterest.svg") no-repeat;
+  width: 14px;
+  height: 18px;
+}
+
+.slideshare {
+  display:inline-block;
+  margin:0 10px 0 1px;
+}
+
+.no-svg .slideshare {
+  background-image: url("../../img/svgicons.png") no-repeat;
+  background-position: -214px 0px;
+  width: 24px;
+  height: 16px;
+}
+
+.svg .slideshare {
+  background: url("../../img/svgicons/slideshare.svg") no-repeat;
+  width: 24px;
+  height: 16px;
+}
+.footer-horizontal {
+  display:block;
+  float:left;
+  width:100%;
+  height:78px;
+  background: #ffffff;
+  text-align:center;
+  font-family: GothamBook;
+  font-size:13px;
+  color:#b5b5b5;
+  padding-top:34px;
+}
+

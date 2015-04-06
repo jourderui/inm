@@ -1,0 +1,126 @@
+
+
+.left{
+  float:left;
+
+}
+.right {
+  float:right;
+  @include breakpoint($mobileAll) {
+    float:left;
+  }
+}
+.blog-wrap {
+  text-align:center;
+}
+
+.blog-element-wrap {
+  /* border:1px solid black; */
+  display:inline-block;
+  @include breakpoint($tabletAll) {
+    background: #ee3e2c;
+    float:none;
+    margin:0 auto;
+  }
+
+  @include breakpoint($screen2) {
+    float:left;
+    width:1208px;
+    background: #ee3e2c;
+  }
+  @include breakpoint($mobileAll) {
+    background: #ee3e2c;
+    width:100%;
+  }
+
+}
+.main-stripe-blog {
+  float:left;
+  display:inline-block;
+  width:72px;
+  background: #ffffff;
+  height:301px;
+  @include breakpoint($tabletAll) {
+    height:602px;
+  }
+  @include breakpoint($mobileAll) {
+    display:none;
+  }
+}
+.blog-element {
+  display:inline-block;
+  text-align:left;
+}
+.blog-image {
+  float:left;
+
+  @include breakpoint($tabletAll) {
+    display:block;
+    float:none;
+  }
+  @include breakpoint($mobile6up) {
+    height:300px;
+    width:300px;
+    display:inline-block;
+  }
+
+  @include breakpoint($mobile6) {
+    float:left;
+    width:100%;
+  }
+
+}
+.blog-text {
+  @include breakpoint($tabletAll) {
+    display:block;
+  }
+  display:inline-block;
+  background: #ee3e2c;
+  width:300px;
+  height:300px;
+}
+.blog-h1 {
+  padding:34px 0 0 32px;
+  font-family: GothamBold;
+  color:#ffffff;
+  font-size:14px;
+}
+.blog-p {
+  padding:42px 0 0 32px;
+  font-family: GothamLight;
+  color:#ffffff;
+  font-size:20px;
+  width:250px;
+  line-height:28px;
+}
+.blog-a {
+  display: block;
+  padding:74px 0 0 32px;
+  font-family: GothamMedium;
+  color:#ffffff;
+  font-size:15px;
+  width:250px;
+}
+
+.icon-arrow {
+  cursor:pointer;
+  display:inline-block;
+  margin-left:10px ;
+}
+
+.no-svg .icon-arrow  {
+  /* border:1px solid black;*/
+  background-image: url("../../img/svgicons.png");
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+  width: 6px;
+  height: 10px;
+}
+
+.svg .icon-arrow {
+  /*border:1px solid black;*/
+  background-image: url("../../img/svgicons/arrowemptyr.svg");
+  background-repeat: no-repeat;
+  width: 6px;
+  height: 10px;
+}

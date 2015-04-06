@@ -12,6 +12,10 @@ html {
   font-family: "GothamMedium";
 }
 
+body {
+  background: #f7f7f7;
+}
+
 section {
   width:100%;
   max-width:1280px;
@@ -19,6 +23,7 @@ section {
   position:relative;
   overflow:hidden;
   margin:0 auto;
+
 }
 
 //link-colors($normal, $hover, $active, $visited, $focus)
@@ -50,3 +55,4 @@ a {
     color: #fefefe;
   }
 }
+
